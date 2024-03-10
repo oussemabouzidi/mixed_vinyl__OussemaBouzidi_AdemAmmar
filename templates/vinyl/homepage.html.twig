@@ -10,7 +10,7 @@
 		<i class="fas fa-edit"></i>
 		<div class="row mt-5">
 			<div class="col-12 col-md-4">
-
+				<div></div>
 				<svg width="100%" height="100%" viewbox="0 0 496 496" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 					<defs>
 						<linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
@@ -38,15 +38,14 @@
 			<div class="col-12 col-md-8 ps-5">
 				<h2 class="mb-4">10 songs (30 minutes of 60 still available)</h2>
 				{% for track in tracks %}
-					<div class="song-list">
+					<div class="song-list" {{ stimulus_controller('song-controls') }}>
 						<div class="d-flex mb-3">
-							<a href="#">
+							<a href="#" data-action="click->songcontrols#play">
 								<i class="fas fa-play me-3"></i>
 							</a>
-							<span class="song-details">{{track.song}}
+							<span class="song-details">{{ track.song }}
 								-
-								{{track.artist}}</span>
-
+								{{ track.artist }}</span>
 							<a href="#">
 								<i class="fas fa-bars mx-3"></i>
 							</a>
@@ -56,6 +55,8 @@
 						</div>
 					</div>
 				{% endfor %}
+
+
 				<button type="button" class="btn btn-success">
 					<i class="fas fa-plus"></i>
 					Add a song</button>
