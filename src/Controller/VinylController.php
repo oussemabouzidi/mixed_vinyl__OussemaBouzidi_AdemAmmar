@@ -13,12 +13,12 @@ class VinylController extends AbstractController
     public function homePage(): Response
     {
         $tracks = [
-            ['song' => 'StarBoy', 'artist' => 'The Weeknd'],
-            ['song' => 'Save your tears', 'artist' => 'The Weeknd'],
+            ['song' => 'Song jeux video', 'artist' => 'Mario'],
+            ['song' => 'Guitar sound', 'artist' => 'Guitar electrique'],
             ['song' => 'Never gonna let you down', 'artist' => 'Rick Astly'],
             ['song' => 'حين ميسرة', 'artist' => 'Zomra'],
-            ['song' => 'Reminder', 'artist' => 'The Weeknd'],
-            ['song' => 'In your eyes', 'artist' => 'The Weeknd'],
+            ['song' => 'tomb raider', 'artist' => 'tomb raider game'],
+            ['song' => 'Nature song', 'artist' => 'Nature'],
         ];
         $title = 'Favorits songs';
         return $this->render('vinyl/homepage.html.twig', [

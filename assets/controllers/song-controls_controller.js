@@ -1,28 +1,33 @@
 import { Controller } from '@hotwired/stimulus';
-
-/*
- * This is an example Stimulus controller!
- *
- * Any element with a data-controller="hello" attribute will cause
- * this controller to be executed. The name "hello" comes from the filename:
- * hello_controller.js -> "hello"
- *
- * Delete this file or adapt it for your use!
- */
 import axios from 'axios';
 
 export default class extends Controller {
     static values = {
-        infoUrl: String
+        infoUrl: String,
     }
+
+    // Maintain reference to the currently playing audio
+    currentAudio = null;
 
     play(event) {
         event.preventDefault();
 
+        // Stop currently playing audio, if any
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+        }
+
         axios.get(this.infoUrlValue)
             .then((response) => {
                 const audio = new Audio(response.data.url);
-                audio.play();
+
+                // Listen for the loadedmetadata event before playing
+                audio.addEventListener('loadedmetadata', () => {
+                    audio.play();
+                });
+
+                // Update the reference to the currently playing audio
+                this.currentAudio = audio;
             });
     }
 }
