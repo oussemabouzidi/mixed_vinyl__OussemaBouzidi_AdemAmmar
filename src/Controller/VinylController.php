@@ -16,7 +16,7 @@ class VinylController extends AbstractController
             ['song' => 'Song jeux video', 'artist' => 'Mario'],
             ['song' => 'Guitar sound', 'artist' => 'Guitar electrique'],
             ['song' => 'Never gonna let you down', 'artist' => 'Rick Astly'],
-            ['song' => 'حين ميسرة', 'artist' => 'Zomra'],
+            ['song' => 'Reminder', 'artist' => 'the weeknd'],
             ['song' => 'tomb raider', 'artist' => 'tomb raider game'],
             ['song' => 'Nature song', 'artist' => 'Nature'],
         ];

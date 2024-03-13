@@ -31,7 +31,8 @@ class SongController extends AbstractController
             [
                 'id' => 4,
                 'name' => 'HinaMaysara',
-                'url' => 'https://rildi.sunproxy.net/file/VDRGdEt2MjRxcU5ZaFc1MFAwa3lqYmFKWkFydGVZeG1KbmNiNE5JeVM2aXdGMEJEVmY1ZGpSSkMrRFBuRGRnLzVqRHRhRDhGdUJMWTdyKzJWZXZ6RWszWHljbXZjSjZQYWIzRzBHYXlpUDA9/Zomra_-_el_hin-maysara_(Hydr0.org).mp3',
+                'url' => 'https://symfonycasts.s3.amazonaws.com/sample.mp3',
+
             ],
             [
                 'id' => 5,
